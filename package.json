@@ -4,7 +4,8 @@
   "description": "A simple carousel connected to Flickr api",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "cd carousel-react && npm install && npm run-script build"
   },
   "repository": {
     "type": "git",
