@@ -1,0 +1,23 @@
+{
+  "name": "carousel",
+  "version": "1.0.0",
+  "description": "A simple carousel connected to Flickr api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryan-gislason/carousel.git"
+  },
+  "keywords": [
+    "carousel",
+    "react"
+  ],
+  "author": "Bryan Gislason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryan-gislason/carousel/issues"
+  },
+  "homepage": "https://github.com/bryan-gislason/carousel#readme"
+}
