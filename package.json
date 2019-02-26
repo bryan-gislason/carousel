@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/bryan-gislason/carousel/issues"
   },
-  "homepage": "https://github.com/bryan-gislason/carousel#readme"
+  "homepage": "https://github.com/bryan-gislason/carousel#readme",
+  "devDependencies": {
+    "create-react-app": "^2.1.5"
+  }
 }
