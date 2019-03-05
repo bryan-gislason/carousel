@@ -47,12 +47,16 @@ class App extends Component<{}, any> {
       });
     });
   }
+
   render() {
     return (
       <div className={styles.App}>
         <header className={styles.AppHeader}>
-          <Carousel imageSources={this.state.images} />
+          <h1>Seattle, WA</h1>
         </header>
+        <div className={styles.AppContent}>
+          <Carousel imageSources={this.state.images} />
+        </div>
       </div>
     );
   }

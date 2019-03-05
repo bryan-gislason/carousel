@@ -3,12 +3,19 @@
 }
 
 .AppHeader {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #0a0b0d;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.AppContent {
+  background-color: #0a0b0d;
+  height: 70vh;
+  padding: 10px;
+  box-sizing: border-box;
 }
