@@ -12,9 +12,11 @@ class App extends Component<{}, any> {
     };
   }
 
-  componentDidMount() {
-    fetch(
-      "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=d78588f066e433afc3fcabdf887c0ea7&safe_search=1&content_type=1&place_id=uiZgkRVTVrMaF2cP&media=photos&format=json&nojsoncallback=true",
+  private fetchSeattleImageSourcesFromFlickr() {
+    return fetch(
+      `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${
+        process.env.REACT_APP_FLICKR_API_KEY
+      }&safe_search=1&content_type=1&place_id=uiZgkRVTVrMaF2cP&media=photos&format=json&nojsoncallback=true`,
       {
         method: "GET"
       }
@@ -23,7 +25,7 @@ class App extends Component<{}, any> {
         return response.json();
       })
       .then(json => {
-        const imageSources = json.photos.photo.reduce(
+        return json.photos.photo.reduce(
           (imageSources: string[], { farm, server, id, secret }: any) => {
             return [
               ...imageSources,
@@ -32,14 +34,18 @@ class App extends Component<{}, any> {
           },
           []
         );
-
-        this.setState((state: any) => {
-          return {
-            ...state,
-            images: imageSources
-          };
-        });
       });
+  }
+
+  componentDidMount() {
+    this.fetchSeattleImageSourcesFromFlickr().then((imageSources: string[]) => {
+      this.setState((state: any) => {
+        return {
+          ...state,
+          images: imageSources
+        };
+      });
+    });
   }
   render() {
     return (
