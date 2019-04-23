@@ -1,0 +1,16 @@
+.column {
+  width: 250px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  padding-bottom: 20px;
+  object-fit: cover;
+}
